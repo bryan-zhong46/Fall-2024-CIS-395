@@ -42,7 +42,7 @@ INSERT INTO Users VALUES('U11','Cindy Lyon','Art','cindy.lyon@hotmail.com','1234
 INSERT INTO Users VALUES('U12','Nicole Gary','Music','ngary@gmail.com','123456789');
 
 CREATE TABLE BooksForSale (
-    bookNo INTEGER NOT NULL,
+    bookNo VARCHAR(4) NOT NULL,
     title VARCHAR(100) NOT NULL,
     author VARCHAR(30),
     edition INTEGER,
@@ -50,21 +50,20 @@ CREATE TABLE BooksForSale (
     price DECIMAL(5,2),
     userId VARCHAR(4) NOT NULL,
     PRIMARY KEY (bookNo),
-    FOREIGN KEY (userId) REFERENCES Users ON DELETE CASCADE ON UPDATE CASCADE);
+    FOREIGN KEY (userId) REFERENCES Users(userId) ON DELETE CASCADE ON UPDATE CASCADE);
 
 INSERT INTO BooksForSale VALUES('B01','Database Systems: A Practical Approach to Design, Implementation and Management','Connolly, Begg',6,'CIS 395',100.00,'U01');
 INSERT INTO BooksForSale VALUES('B02','Programming the World Wide Web','Sebesta',8,'CIS 385',100.00,'U02');
 INSERT INTO BooksForSale VALUES('B03','Starting Out With Java: From Control Structures through Objects','Gaddis',8,'CIS 210',100.00,'U03');
 
 CREATE TABLE Requests (
-    requestNo INTEGER NOT NULL,
+    requestNo VARCHAR(4) NOT NULL,
     title VARCHAR(100) NOT NULL,
     author VARCHAR(30),
     edition INTEGER,
     course VARCHAR(7),
     userId VARCHAR(4) NOT NULL,
     PRIMARY KEY (requestNo),
-    FOREIGN KEY (userId) REFERENCES Users ON DELETE CASCADE ON UPDATE CASCADE
-);
+    FOREIGN KEY (userId) REFERENCES Users(userId) ON DELETE CASCADE ON UPDATE CASCADE);
 
 INSERT INTO Requests VALUES('R01','Database Systems: A Practical Approach to Design, Implementation and Management','Connolly, Begg',6,'CIS 395','U01');
