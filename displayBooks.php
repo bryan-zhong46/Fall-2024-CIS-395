@@ -28,7 +28,7 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
   // output data of each row
-  echo "<table><tr><th>BookNo</th><th>Title</th><th>Author</th><th>Edition</th><th>Course</th><th>Price</th><th>Seller userID</th></tr>";
+  echo "<table><tr><th>BookNo</th><th>Title</th><th>Author</th><th>Edition</th><th>Course</th><th>Price</th><th>Seller's userID</th></tr>";
   while($row = $result->fetch_assoc()) {    
 	echo "<tr><td>$row[bookNo]</td><td>$row[title]</td><td>$row[author]</td><td>$row[edition]</td><td>$row[course]</td><td>$row[price]</td><td>$row[userID]</td></tr>";	
   }
