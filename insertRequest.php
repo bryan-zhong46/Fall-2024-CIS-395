@@ -2,22 +2,22 @@
 <html>
 <body>
 
-<h2>Insert Book For Sale</h2>
+<h2>Insert Request for Book</h2>
 
 <?php
 require_once "config.php";
 
-$bookNo = $_POST["bookNo"];
+$requestNo = $_POST["requestNo"];
 $title = $_POST["title"];
 $author = $_POST["author"];
 $edition = $_POST["edition"];
 $course = $_POST["course"];
-$price = $_POST["price"];
+// $price = $_POST["price"];
 $userId = $_POST["userId"];
 
 
-$sql = "INSERT INTO BooksForSale (bookNo, title, author, edition, course, price, userId)
-VALUES ('$bookNo', '$title', '$author', '$edition', '$course', '$price', '$userId')";
+$sql = "INSERT INTO Requests (requestNo, title, author, edition, course, userId)
+VALUES ('$requestNo', '$title', '$author', '$edition', '$course', '$userId')";
 
 
 if ($conn->query($sql) == TRUE) {
@@ -30,7 +30,7 @@ $conn->close();
 ?>
 
 <br><br>
-<a href="manageBooks.html">Back to Books</a>
+<a href="manageRequests.html">Back to Requests</a>
 <a href="index.html">Back to main menu</a>
 
 </body>

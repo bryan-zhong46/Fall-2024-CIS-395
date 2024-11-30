@@ -42,7 +42,7 @@ INSERT INTO Users VALUES('U11','Cindy Lyon','Art','cindy.lyon@hotmail.com','1234
 INSERT INTO Users VALUES('U12','Nicole Gary','Music','ngary@gmail.com','123456789');
 
 CREATE TABLE BooksForSale (
-    bookNo VARCHAR(4) NOT NULL,
+    bookNo VARCHAR(4),
     title VARCHAR(100) NOT NULL,
     author VARCHAR(30),
     edition INTEGER,
@@ -57,7 +57,7 @@ INSERT INTO BooksForSale VALUES('B02','Programming the World Wide Web','Sebesta'
 INSERT INTO BooksForSale VALUES('B03','Starting Out With Java: From Control Structures through Objects','Gaddis',8,'CIS 210',100.00,'U03');
 
 CREATE TABLE Requests (
-    requestNo VARCHAR(4) NOT NULL,
+    requestNo VARCHAR(4),
     title VARCHAR(100) NOT NULL,
     author VARCHAR(30),
     edition INTEGER,
