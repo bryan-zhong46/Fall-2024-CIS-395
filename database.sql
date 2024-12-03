@@ -50,7 +50,7 @@ CREATE TABLE BooksForSale (
     price DECIMAL(5,2),
     userId VARCHAR(4) NOT NULL,
     PRIMARY KEY (bookNo),
-    FOREIGN KEY (userId) REFERENCES Users(userId) ON DELETE CASCADE ON UPDATE CASCADE);
+    FOREIGN KEY (userId) REFERENCES Users(userId) ON UPDATE CASCADE);
 
 INSERT INTO BooksForSale VALUES('B01','Database Systems: A Practical Approach to Design, Implementation and Management','Connolly, Begg',6,'CIS 395',100.00,'U01');
 INSERT INTO BooksForSale VALUES('B02','Programming the World Wide Web','Sebesta',8,'CIS 385',100.00,'U02');
@@ -64,6 +64,6 @@ CREATE TABLE Requests (
     course VARCHAR(7),
     userId VARCHAR(4) NOT NULL,
     PRIMARY KEY (requestNo),
-    FOREIGN KEY (userId) REFERENCES Users(userId) ON DELETE CASCADE ON UPDATE CASCADE);
+    FOREIGN KEY (userId) REFERENCES Users(userId) ON UPDATE CASCADE);
 
 INSERT INTO Requests VALUES('R01','Database Systems: A Practical Approach to Design, Implementation and Management','Connolly, Begg',6,'CIS 395','U01');
