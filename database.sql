@@ -67,3 +67,5 @@ CREATE TABLE Requests (
     FOREIGN KEY (userId) REFERENCES Users(userId) ON UPDATE CASCADE);
 
 INSERT INTO Requests VALUES('R01','Database Systems: A Practical Approach to Design, Implementation and Management','Connolly, Begg',6,'CIS 395','U01');
+INSERT INTO Requests VALUES('R02','University Physics','Newton',1,'PHY 101','U02');
+INSERT INTO Requests VALUES('R03','College Mathematics','Euler',1,'MAT 101','U03');

@@ -40,7 +40,7 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
   // output data of each row
-  echo "<table><tr><th>UserID</th><th>Name</th><th>Major</th><th>Email</th></tr>";
+  echo "<table><tr><th>UserID</th><th>Name</th><th>Major</th><th>Email</th>><th>Phone</th></tr>";
   while($row = $result->fetch_assoc()) {    
 	echo "<tr><td>$row[userID]</td><td>$row[name]</td><td>$row[major]</td><td>$row[email]</td><td>$row[phoneNo]</td></tr>";	
   }
